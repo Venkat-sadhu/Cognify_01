@@ -1,0 +1,117 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Updated body with background image */
+body {
+    /* Ensure your image is saved in the same folder as this file */
+    background-image: url('background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the image in place when scrolling */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container styling - slightly transparent to see the background */
+.converter-container {
+    background-color: rgba(255, 255, 255, 0.95); /* 95% opaque white */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Darker shadow for contrast */
+    backdrop-filter: blur(5px); /* Adds a nice blur effect behind the container */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+input[type="number"], 
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #f9f9f9;
+}
+
+input[type="number"]:focus, 
+select:focus {
+    border-color: #e65c00; /* Changed to a fiery orange to match background */
+    box-shadow: 0 0 5px rgba(230, 92, 0, 0.5);
+    background-color: #fff;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e65c00; /* Fiery orange theme */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #cc5200;
+}
+
+/* Result display styling */
+/* Result display styling - HIGHLIGHTED */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    /* Dark gradient background for high contrast */
+    background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+    /* Bright gold text */
+    color: #ffd700; 
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    /* Glowing fiery border and shadow */
+    border: 2px solid #ff5722; 
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.6), inset 0 0 10px rgba(255, 87, 34, 0.2);
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+    word-break: break-word;
+}
